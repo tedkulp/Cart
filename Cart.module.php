@@ -84,7 +84,7 @@ class Cart extends CGEcommerceBase
    ---------------------------------------------------------*/
   public function GetVersion()
   {
-    return '1.7.2';
+    return '1.7.3';
   }
 
 
@@ -317,6 +317,7 @@ class Cart extends CGEcommerceBase
 	  {
 	    $itemprice += $oneattribobj->adjustment;
 	  }
+	$this->SendEvent('SetUnitPrice', array('obj' => &$obj, 'item_price' => &$itemprice));
 	$obj->set_unit_price($itemprice);
 
 	// adjust metadata.

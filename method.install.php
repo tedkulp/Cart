@@ -57,6 +57,7 @@ if( file_exists($fn) )
     $this->SetPreference('viewcartform_dflt','Sample');
   }
 
+$this->CreateEvent('SetUnitPrice');
 
 // EOF
 ?>

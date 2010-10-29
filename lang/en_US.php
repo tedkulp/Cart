@@ -25,6 +25,15 @@ $lang['error_cartpolicy_additem'] = 'Cannot add this item to the cart. See the w
 $lang['error_invalidparam'] = 'A supplied parameter has an incorrect value: %s';
 $lang['error_missingparam'] = 'A required parameter is missing: %s';
 $lang['error_nosuchproduct'] = 'Could not find information on the product: %s';
+$lang['event_desc_SetUnitPrice'] = 'Called before the unit price is set for the item in the Cart.';
+$lang['event_help_SetUnitPrice'] = <<<EOT
+<p>Called before the unit price is set for the item in the Cart.  Allows for advanced calculations of unit price based on logic instead of attribute sets.</p>
+<h4>Parameters:</h4>
+<ul>
+<li>&quot;obj&quot; - The &quot;product&quot; who&apos;s price is being calculated.</li>
+<li>&quot;item_price&quot; - Reference to the item price that is about to be set.  Set this to something else to change it.</li>
+</ul>
+EOT;
 
 # F
 $lang['friendlyname'] = 'Cart';

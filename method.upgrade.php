@@ -76,6 +76,9 @@ switch($current_version)
 	$this->SetTemplate('productsummary',$template);
       }
 
+  case '1.7.2':
+	$this->CreateEvent('SetUnitPrice');
+
   }
 
 // EOF
