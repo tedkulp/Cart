@@ -164,7 +164,7 @@ if( $product->count_attributes() )
 	$obj->name = $attrib->get_name();
 	$obj->id = $attrib->get_id();
 	$tmp = $attrib->get_dropdown_options();
-	$tmp = array_flip($tmp);
+	$tmp = @array_flip($tmp);
 	$obj->control = $this->CreateInputDropdown($id,'cart_attrib_'.$attrib->get_id(),$tmp);
 	$attrib_array[] = $obj;
       }
