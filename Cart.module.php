@@ -229,6 +229,9 @@ class Cart extends CGEcommerceBase
     $this->CreateParameter('product','',$this->Lang('help_product'));
     $this->SetParameterType('product',CLEAN_INT);
 
+    $this->CreateParameter('inline','0',$this->Lang('help_inline'));
+    $this->SetParameterType('inline',CLEAN_INT);
+
     $this->CreateParameter('viewcarttemplate','',$this->Lang('help_viewcarttemplate'));
     $this->SetParameterType('viewcarttemplate',CLEAN_STRING);
 

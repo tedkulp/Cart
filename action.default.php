@@ -54,6 +54,10 @@ if( !$product )
   }
 $session_obj = new cge_session($this->GetName().'_add');
 
+$inline = false;
+if (isset($params['inline']) && $params['inline'] == '1')
+	$inline = true;
+
 // $attribset_list = '';
 // if( isset($product['attributes']) )
 //   {
@@ -142,7 +146,7 @@ if( $session_obj->exists($id.'error') )
 $smarty->assign('formstart',
 		$this->CGCreateFormStart($id,'default',$returnid,
 					 array('product'=>$product_id,
-					       'cart_returnto'=>cge_url::current_url())));
+					       'cart_returnto'=>cge_url::current_url()), $inline));
 $smarty->assign('formend',$this->CreateFormEnd());
 $smarty->assign('quantityname',$id.'cart_quantity');
 $smarty->assign('submitname',$id.'cart_submit');
